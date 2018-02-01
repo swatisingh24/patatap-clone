@@ -1,0 +1,250 @@
+<html>
+<head>
+	<title>Circles</title>
+	<script type="text/javascript" src="paper-full.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.5/howler.js"></script>
+	<link rel="stylesheet" type="text/css" href="circles.css">
+
+	<script type="text/paperscript" canvas="myCanvas">
+	
+	var circles=[];
+	var rectangles=[];
+	var lines=[];
+
+	var sound1 = new Howl({
+      src: ['sounds/bubbles.mp3']
+    });
+    var sound2 = new Howl({
+      src: ['sounds/clay.mp3']
+    });
+    var sound3 = new Howl({
+      src: ['sounds/confetti.mp3']
+    });
+    var sound4 = new Howl({
+      src: ['sounds/corona.mp3']
+    });
+    var sound5 = new Howl({
+      src: ['sounds/dotted-spiral.mp3']
+    });
+    var sound6 = new Howl({
+      src: ['sounds/flash-1.mp3']
+    });
+    var sound7 = new Howl({
+      src: ['sounds/flash-2.mp3']
+    });
+    var sound8 = new Howl({
+      src: ['sounds/flash-3.mp3']
+    });
+    var sound9 = new Howl({
+      src: ['sounds/glimmer.mp3']
+    });
+    var sound10 = new Howl({
+      src: ['sounds/moon.mp3']
+    });
+    var sound11 = new Howl({
+      src: ['sounds/pinwheel.mp3']
+    });
+    var sound12 = new Howl({
+      src: ['sounds/piston-1.mp3']
+    });
+    var sound13 = new Howl({
+      src: ['sounds/piston-2.mp3']
+    });
+    var sound14 = new Howl({
+      src: ['sounds/piston-3.mp3']
+    });
+    var sound15 = new Howl({
+      src: ['clap-loop.mp3']
+    });
+    var sound16 = new Howl({
+      src: ['sounds/prism-2.mp3']
+    });
+    var sound17 = new Howl({
+      src: ['sounds/zig-zag.mp3']
+    });
+    var sound18 = new Howl({
+      src: ['sounds/splits.mp3']
+    });
+    var sound19 = new Howl({
+      src: ['sounds/squiggle.mp3']
+    });
+    var sound20 = new Howl({
+      src: ['sounds/strike.mp3']
+    });
+    var sound21 = new Howl({
+      src: ['sounds/timer.mp3']
+    });
+    var sound22 = new Howl({
+      src: ['sounds/ufo.mp3']
+    });
+    var sound23 = new Howl({
+      src: ['sounds/veil.mp3']
+    });
+    var sound24 = new Howl({
+      src: ['sounds/wipe.mp3']
+    });
+    var sound25 = new Howl({
+      src: ['sounds/zig-zag.mp3']
+    });
+    var sound26 = new Howl({
+      src: ['groove-loop.mp3']
+    });
+
+	function onKeyDown(event){
+		var maxPoint= new Point(view.size.width,view.size.height);
+		var randomPoint=Point.random();
+		var points=randomPoint*maxPoint;
+			
+		if(event.key==="a"){
+			sound1.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor='red';
+			circles.push(myCircle);
+		}else if(event.key==="b"){
+			sound2.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor='blue';
+			circles.push(myCircle);
+		}else if(event.key==="c"){
+			sound3.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor="pink";
+			circles.push(myCircle);
+		}else if(event.key==="d"){
+			sound4.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor='blue';
+			circles.push(myCircle);
+		}else if(event.key==="e"){
+			sound5.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor="pink";
+			circles.push(myCircle);
+		}else if(event.key==="f"){
+			sound6.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor='blue';
+			circles.push(myCircle);
+		}else if(event.key==="g"){
+			sound7.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor="pink";
+			circles.push(myCircle);
+		}else if(event.key==="h"){
+			sound8.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor='blue';
+			circles.push(myCircle);
+		}else if(event.key==="i"){
+			sound9.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor="pink";
+			circles.push(myCircle);
+		}else if(event.key==="j"){
+			sound10.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor='blue';
+			circles.push(myCircle);
+		}else if(event.key==="k"){
+			sound11.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor="pink";
+			circles.push(myCircle);
+		}else if(event.key==="l"){
+			sound12.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor='blue';
+			circles.push(myCircle);
+		}else if(event.key==="m"){
+			sound13.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor="pink";
+			circles.push(myCircle);
+		}else if(event.key==="n"){
+			sound14.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor='blue';
+			circles.push(myCircle);
+		}else if(event.key==="o"){
+			sound15.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor="orange";
+			circles.push(myCircle);
+		}else if(event.key==="p"){
+			sound16.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor='yellow';
+			circles.push(myCircle);
+		}else if(event.key==="q"){
+			sound17.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor="pink";
+			circles.push(myCircle);
+		}else if(event.key==="r"){
+			sound18.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor='orange';
+			circles.push(myCircle);
+		}else if(event.key==="s"){
+			sound19.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+	        myCircle.fillColor='green';
+	        circles.push(myCircle);      
+		}else if(event.key==="t"){
+			sound20.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor='grey';
+			circles.push(myCircle);
+		}else if(event.key==="u"){
+			sound21.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor="white";
+			circles.push(myCircle);
+		}else if(event.key==="v"){
+			sound22.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor='purple';
+			circles.push(myCircle);
+		}else if(event.key==="w"){
+			sound23.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor="brown";
+			circles.push(myCircle);
+		}else if(event.key==="x"){
+			sound24.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor='cyan';
+			circles.push(myCircle);
+		}else if(event.key==="y"){
+			sound25.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor='magenta';
+			circles.push(myCircle);
+		}else if(event.key==="z"){
+			sound26.play();
+			var myCircle= new Path.Circle(new Point(points),300);
+			myCircle.fillColor='green';
+			circles.push(myCircle);
+		}
+	}
+
+	function onFrame(event) {
+		for(var i=0;i<circles.length;i++){
+			circles[i].fillColor.hue+=1;
+			circles[i].scale(0.9);
+		}
+		 for(var i=0;i<lines.length;i++){
+          lines[i].fillColor.hue+=4;
+          lines[i].rotate(10);
+          lines[i].scale(0.9);
+          if(lines.length>100)
+            lines.splice(0,1);
+        }
+	}
+
+</script>
+</head>
+<body>
+<canvas id="myCanvas" resize></canvas>
+</body>
+</html>
